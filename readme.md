@@ -6,8 +6,9 @@ Many perl sound examples I have come across have needed /dev/dsp/ support.  This
 
 In [Attempt 1](Twinkle.pl#) I have adapted an illustration of how to pipe a stream into padsp and then tee to a /dev/dsp.
 
-
-
+```
+open (my $dsp,"|padsp tee /dev/audio > /dev/null") or   die qq(Couldn't execute for piping);
+```
 
 
 ### Resources
