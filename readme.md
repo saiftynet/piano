@@ -10,6 +10,15 @@ In [Attempt 1](Twinkle.pl#) I have adapted an illustration of how to pipe a stre
 open (my $dsp,"|padsp tee /dev/audio > /dev/null") or   die qq(Couldn't execute for piping);
 ```
 
+### Frequency to data conversion
+
+$sps=8000       #  samples per second
+$resolution=128 #  peak to peak
+
+#### simple sin wave
+
+     @data=map {$resolution*  $_*  2*$freq*pi/$sps} (0..$sps-1)
+
 
 ### Resources
 
