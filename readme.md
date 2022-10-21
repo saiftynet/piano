@@ -10,4 +10,6 @@ A low dependency terminal piano player writen in Perl
 
 [padsp](https://unix.stackexchange.com/questions/13732/generating-random-noise-for-fun-in-dev-snd)
 
+Check out [morsify](https://www.perlmonks.org/?node_id=1819)
+
 
