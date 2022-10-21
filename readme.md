@@ -19,4 +19,8 @@ open (my $dsp,"|padsp tee /dev/audio > /dev/null") or   die qq(Couldn't execute 
 
 Check out [morsify](https://www.perlmonks.org/?node_id=1819)
 
+[Pure Perl Beep](https://metacpan.org/pod/Audio::Beep::Linux::PP) using ioctl
+
+[Music notes](https://en.wikipedia.org/wiki/Piano_key_frequencies)
+
 
