@@ -10,6 +10,9 @@ In [Attempt 1](Twinkle.pl#) I have adapted an illustration of how to pipe a stre
 open (my $dsp,"|padsp tee /dev/audio > /dev/null") or   die qq(Couldn't execute for piping);
 ```
 
+[Attempt 2](Attempt%202.pl#) maps 96 key piano to notes and frequencies and a sinewave generator
+
+
 ### Frequency to data conversion
 
 #### key to frequency converter
