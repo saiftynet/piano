@@ -12,7 +12,7 @@ open (my $dsp,"|padsp tee /dev/audio > /dev/null") or   die qq(Couldn't execute 
 
 [Attempt 2](Attempt%202.pl#) maps 96 key piano to notes and frequencies and a sinewave generator
 
-[SampleMaker}()
+[SampleMaker](SampleMaker.pl#)
 
 * Draws the piano and notes with reference a keyboard.
 * creates and saves a sample file so does note need to be recreated
