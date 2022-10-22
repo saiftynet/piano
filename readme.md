@@ -12,7 +12,7 @@ open (my $dsp,"|padsp tee /dev/audio > /dev/null") or   die qq(Couldn't execute 
 
 ### Frequency to data conversion
 
-$sps=8000       #  samples per second
+$sps=8000       #  sample size
 $resolution=128 #  peak to peak
 
 #### simple sin wave
