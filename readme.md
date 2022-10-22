@@ -12,14 +12,20 @@ open (my $dsp,"|padsp tee /dev/audio > /dev/null") or   die qq(Couldn't execute 
 
 [Attempt 2](Attempt%202.pl#) maps 96 key piano to notes and frequencies and a sinewave generator
 
+[SampleMaker}()
+
+* Draws the piano and notes with reference a keyboard.
+* creates and saves a sample file so does note need to be recreated
+* outputs keys data as keys atrer pressed
+
 
 ### Frequency to data conversion
 
 #### key to frequency converter
-
-Frequency of middle A (note A4, key 49) is 440hz;
+Number of keys to middleA= keys_to_A4
+Frequency of middle A (note A4, key keys_to_A4) is 440hz;
 all other keys can be derived from this
-freqency=440 * 2  ** (KeyNumber-49)/12
+freqency=440 * 2  ** ((KeyNumber - keys_to_A4)/12)
 
 
 #### simple sin wave
