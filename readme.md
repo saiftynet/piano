@@ -12,13 +12,19 @@ open (my $dsp,"|padsp tee /dev/audio > /dev/null") or   die qq(Couldn't execute 
 
 ### Frequency to data conversion
 
-$sps=8000       #  sample size
-$resolution=128 #  peak to peak
+#### key to frequency converter
+
+Frequency of middle A (note A4, key 49) is 440hz;
+all other keys can be derived from this
+freqency=440 * 2  ** (KeyNumber-49)/12
+
 
 #### simple sin wave
-
-     @data=map {$resolution*  $_*  2*$freq*pi/$sps} (0..$sps-1)
-
+```
+$sps=8000       #  sample size
+$resolution=128 #  peak to peak
+@sample_data=map {$resolution *  $_ *  2 * $freq * pi/$sps} (0..$sps-1)
+```
 
 ### Resources
 
