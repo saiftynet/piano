@@ -27,24 +27,24 @@ my $keyboard=<<EOK;
     Perl Incredibly Annoying Noisy Organ
 
     1   2   3   4   5   6   7   8   9   0   -   =
-        A#      C#  D#      F#  G#  A#      C#
+        C#  D#      F#  G#  A#      C#  D#      F#
  
       q   w   e   r   t   y   u   i   o   p   [ 
-      A   B   C   D   E   F   G   A   B   C   D
+      C   D   E   F   G   A   B   C   D   E   F
   
         a   s   d   f   g   h   j   k   l   ;   '
-            F#  G#  A#      C#  D#      F#  G#  A#
+        G#  A#      C#  D#      F#  G#  A#
 
       \\   z   x   c   v   b   n   m   ,   .   /    
-      E   F   G   A   B   C   D   E   F   G   A
+      G   A   B   C   D   E   F   G   A   B   C
 
 EOK
 
 my $key2note={
-	2=>"A#3",	4=>"C#3",	5=>"D#3",	7=>"F#3",	8=>"G#3",	"9"=>"A#4", "-"=>"C#4",
-	q=>"A3",	w=>"B3",	e=>"C3",	r=>"D3",	t=>"E3",	y=>"F3",	u=>"G3",	i=>"A4",	o=>"B4", p=>"C4", "["=>"D4",
-	s=>"F#4",  d=>"G#4", f=>"A#5", h=>"C#5", j=>"D#5", l=>"F#5", ";"=>"G#5", "'"=>"A#5",
-	"\\"=>"E4", z=>"F4", x=>"G4", c=>"A5", v=> "B5", b=>"C5", n=>"D5", m=>"E5", ","=>"F5", "."=>"G5", "/"=>"A6",
+	2=>"C#3",	3=>"D#3",	5=>"F#3",	6=>"G#3",	7=>"A#3",	9=>"C#4", "0"=>"D#4", "="=>"F#4",
+	q=>"C3",	w=>"D3",	e=>"E3",	r=>"F3",	t=>"G3",	y=>"A3",	u=>"B3",	i=>"C4",	o=>"D4", p=>"E4", "["=>"F4",
+	s=>"G#4",  d=>"A#4", f=>"C#5", h=>"D#5", j=>"F#5", k=>"G#5", l=>"A#5", "'"=>"C#6",
+	"\\"=>"G4", z=>"A4", x=>"B4", c=>"C5", v=> "D5", b=>"E5", n=>"F5", m=>"G5", ","=>"A5", "."=>"B5", "/"=>"C6",
 };
 
 print $keyboard;
@@ -52,7 +52,8 @@ print "Start pressing keys... Escape to exit;\n";
 my $refreshRate=50;    # read 50 times a second
 ReadMode 'cbreak';
 while(1){
-	my $key = ReadKey(-1) or next; 
+	my $key = ReadKey(-1); 
+	next unless defined $key;
 	last if ( ord($key)==27);   # escape key exits
 	next unless exists $key2note->{$key};
 	sleep 1/$refreshRate;
