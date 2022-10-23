@@ -15,8 +15,8 @@ open (my $dsp,"|padsp tee /dev/audio > /dev/null") or   die qq(Couldn't execute 
 [SampleMaker](SampleMaker.pl#) (Attempt 3)
 
 * Draws the piano and notes with reference a keyboard.
-* creates and saves a sample file so does not need to be recreated (using storaable)
-* outputs keys data as keys atrer pressed
+* creates and saves a sample file so does not need to be recreated (using storable)
+* outputs keys data as keys are pressed ( key pressed, note represented, and frequency) as debug.
 * realised that octaves dont go A..G, but C..B !!
 * works but not for the A keys!!!..Help!!
 
