@@ -6,7 +6,7 @@ use Storable;
 open (my $dsp,"|padsp tee /dev/dsp > /dev/null") or   die qq(Couldn't execute for piping);
 my @octaves=("C","C#","D","D#","E","F","F#","G","G#","A","A#","B") x 8; # create 96 key piano
 my @keys= map{$octaves[$_].(int ($_/12)) }(0..$#octaves);          # append the octave number
-my $notes={keys=>\@keys,sps=>900};                   # hashref to store the notes with keys
+my $notes={keys=>\@keys,sps=>1024};    # hashref to store the notes with keys.  Minimum sample size is 1024 bytes.
 
 my $middleA=440;
 if (-e "SineNotes$middleA.STOR"){
@@ -59,7 +59,6 @@ while(1){
 	sleep 1/$refreshRate;
 	print $key,"-",$key2note->{$key},"-",$notes->{$key2note->{$key}}->{f};
 	playNote( $key2note->{$key});    # Play the note
-	playNote( $key2note->{$key});    # need to press twice to make it work ?why
 }
 
 ReadMode 'normal';
