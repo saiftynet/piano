@@ -20,6 +20,14 @@ open (my $dsp,"|padsp tee /dev/audio > /dev/null") or   die qq(Couldn't execute 
 * realised that octaves dont go A..G, but C..B !!
 * works but not for the A keys!!!..Help!!
 
+Final version [PIANO.pl](piano.pl)
+
+* The audio logic is now in a module Term::Graille::Audio
+* Uses Term::Graille::Interact for interaction 
+* Thus the actual program now is much more compact, but now depends on these component modules of Term::Graille
+
+[PIANO.webm](https://user-images.githubusercontent.com/34284663/198387222-f1287dd5-3bb2-4718-9fbd-ef8190661580.webm)
+
 
 ### Frequency to data conversion
 
