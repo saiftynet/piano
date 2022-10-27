@@ -26,6 +26,8 @@ Final version [PIANO.pl](piano.pl)
 * Uses Term::Graille::Interact for interaction 
 * Thus the actual program now is much more compact, but now depends on these component modules of Term::Graille
 
+(Enable sound in the video)
+
 [PIANO.webm](https://user-images.githubusercontent.com/34284663/198387222-f1287dd5-3bb2-4718-9fbd-ef8190661580.webm)
 
 
