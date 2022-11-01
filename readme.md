@@ -28,7 +28,7 @@ Final version [PIANO.pl](piano.pl)
 
 (Enable sound in the video)
 
-[PIANO.webm](https://user-images.githubusercontent.com/34284663/198387222-f1287dd5-3bb2-4718-9fbd-ef8190661580.webm)
+[PIANO.webm](https://user-images.githubusercontent.com/34284663/198387222-f1287dd5-3bb2-4718-9fbd-ef8190661580.webm?muted=false)
 
 ### Frequency to data conversion
 
