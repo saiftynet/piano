@@ -29,6 +29,13 @@ Final version [PIANO.pl](piano.pl)
 (Enable sound in the video)
 
 [PIANO.webm](https://user-images.githubusercontent.com/34284663/198387222-f1287dd5-3bb2-4718-9fbd-ef8190661580.webm)
+<video controls>
+  <source src="https://user-images.githubusercontent.com/34284663/198387222-f1287dd5-3bb2-4718-9fbd-ef8190661580.webm" type="video/webm" />
+  <p>
+    Your browser doesn't support HTML video. Here is a
+    <a href="myVideo.mp4">link to the video</a> instead.
+  </p>
+</video>
 
 
 ### Frequency to data conversion
