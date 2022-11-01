@@ -30,12 +30,6 @@ Final version [PIANO.pl](piano.pl)
 
 [PIANO.webm](https://user-images.githubusercontent.com/34284663/198387222-f1287dd5-3bb2-4718-9fbd-ef8190661580.webm)
 
-
-<video controls>
-  <source src="https://user-images.githubusercontent.com/34284663/198387222-f1287dd5-3bb2-4718-9fbd-ef8190661580.webm" type="video/webm" />
-</video>
-
-
 ### Frequency to data conversion
 
 #### key to frequency converter
