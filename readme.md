@@ -4,15 +4,15 @@ A low dependency terminal piano player writen in Perl.
 
 Many perl sound examples I have come across have needed /dev/dsp/ support.  This requires OSS compatibility support and is not automatically available in my distro. [Audio::DSP](http://matrix.cpantesters.org/?dist=Audio-DSP+0.02) fails.   While it can be installed, I have explored ways I may bypass this. [padsp](https://linux.die.net/man/1/padsp) is one option. It can be used to [start a program](https://wiki.archlinux.org/title/PulseAudio#padsp_wrapper) to give it OSS compatibility and access to /dev/dsp etc.
 
-In [Attempt 1](Twinkle.pl#) Twinkle.pl. I have combined some code found in a code golf site, and combined it with a pipe into padsp and then tee to a /dev/dsp. (see refs below).  A previous bug had been that the data in the piano aplication would only produce outputs on alternate calles.  It appears that the piping/processing of the sounds waits until 1024 bytes are sent...
+In [Attempt 1](old/Twinkle.pl#) Twinkle.pl. I have combined some code found in a code golf site, and combined it with a pipe into padsp and then tee to a /dev/dsp. (see refs below).  A previous bug had been that the data in the piano aplication would only produce outputs on alternate calles.  It appears that the piping/processing of the sounds waits until 1024 bytes are sent...
 
 ```
 open (my $dsp,"|padsp tee /dev/audio > /dev/null") or   die qq(Couldn't execute for piping);
 ```
 
-[Attempt 2](Attempt%202.pl#) maps 96 key piano to notes and frequencies and a sinewave generator
+[Attempt 2](old/Attempt%202.pl#) maps 96 key piano to notes and frequencies and a sinewave generator
 
-[SampleMaker](SampleMaker.pl#) (Attempt 3)
+[SampleMaker](old/SampleMaker.pl#) (Attempt 3)
 
 * Draws the piano and notes with reference a keyboard.
 * creates and saves a sample file so does not need to be recreated (using storable)
