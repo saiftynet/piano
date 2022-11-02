@@ -22,8 +22,8 @@ open (my $dsp,"|padsp tee /dev/audio > /dev/null") or   die qq(Couldn't execute 
 
 Final version [PIANO.pl](piano.pl)
 
-* This version just needs Term::ReadKey and Time::HiRes and a PulseAudio installation.  Winodws version will come once I figure out how to do it.
-* There is now a derived module he audio logic is now in a module [Term::Graille::Audio and uses Term::Graille::Interact for interaction](https://github.com/saiftynet/Term-Graille) 
+* This version just needs Term::ReadKey and Time::HiRes and a PulseAudio installation.  Windows version will come once I figure out how to do it.
+* There is now a derived module; the audio logic is now in a module [Term::Graille::Audio](https://github.com/saiftynet/Term-Graille) and uses [Term::Graille::Interact for interaction](https://github.com/saiftynet/Term-Graille).
 
 (Enable sound in the video)
 
