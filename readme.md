@@ -22,7 +22,7 @@ open (my $dsp,"|padsp tee /dev/audio > /dev/null") or   die qq(Couldn't execute 
 
 Final version [PIANO.pl](piano.pl)
 
-* This version depends on Term::Graille v0.10 not yet released (use the [SampleMaker.pl](SampleMaker.pl#) above for one that just needs Term::ReadKey and Time::HiRes) 
+* This version just needs Term::ReadKey and Time::HiRes) and a PulseAudio installation
 * The audio logic is now in a module Term::Graille::Audio
 * Uses Term::Graille::Interact for interaction 
 * Thus the actual program now is much more compact, but now depends on these component modules of Term::Graille
